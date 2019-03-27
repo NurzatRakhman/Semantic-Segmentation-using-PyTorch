@@ -106,4 +106,6 @@ venv.bak/
 # folders 
 images/
 mask/
-weights/
+weights/ 
+test_images/
+train_images/

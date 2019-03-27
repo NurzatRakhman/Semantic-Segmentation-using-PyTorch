@@ -1,6 +1,5 @@
 import os
 import matplotlib.pyplot as plt
-
 from torchvision.transforms import ToTensor, Compose, Normalize, Resize
 from torch.autograd import Variable
 import torch.optim as optim
@@ -73,12 +72,12 @@ if __name__ == '__main__':
 
     params = {
 
-        "image_dir": os.path.join(os.getcwd(), 'images'),
+        "image_dir": os.path.join(os.getcwd(), 'train_images'),
         "mask_dir":  os.path.join(os.getcwd(), 'mask'),
         "number_classes": 2,
         "object_pixel": 255,
         "batch_size": 1,
-        "epochs": 20,
+        "epochs": 300,
         "save_steps": 10,
         "num_workers": 0,
         "resize_width": 256,
