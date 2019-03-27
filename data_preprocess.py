@@ -24,9 +24,9 @@ def image_basename(filename):
 
 class CustomDataset(Dataset):
 
-    def __init__(self, root, input_transform=None, target_transform=None):
-        self.images_root = os.path.join(root, 'train')
-        self.labels_root = os.path.join(root, 'mask')
+    def __init__(self, image_dir, mask_dir, input_transform=None, target_transform=None):
+        self.images_root = image_dir
+        self.labels_root = mask_dir
 
         self.filenames = [image_basename(f)
             for f in os.listdir(self.labels_root) if is_image(f)]
