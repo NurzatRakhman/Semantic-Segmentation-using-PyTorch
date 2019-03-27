@@ -31,8 +31,8 @@ def predict(params):
     model = load_checkpoint(params["model_dir"])
     test_dir = params["test_dir"]
     test_img = Image.open(test_dir).convert('RGB')
-    image = input_transform(test_img)
 
+    image = input_transform(test_img)
     output = model(Variable(image, volatile=True).unsqueeze(0))
     label_raw = output[0].data.max(0)[1].unsqueeze(0)
     label_np = np.transpose(label_raw.cpu().detach().numpy(), (1, 2, 0))

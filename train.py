@@ -77,7 +77,7 @@ if __name__ == '__main__':
         "number_classes": 2,
         "object_pixel": 255,
         "batch_size": 1,
-        "epochs": 300,
+        "epochs": 600,
         "save_steps": 10,
         "num_workers": 0,
         "resize_width": 256,
