@@ -1,8 +1,7 @@
 import os
 import matplotlib.pyplot as plt
 
-from torchvision.transforms import ToTensor, ToPILImage
-from torchvision.transforms import Compose, Normalize, Resize
+from torchvision.transforms import ToTensor, Compose, Normalize, Resize
 from torch.autograd import Variable
 import torch.optim as optim
 

@@ -30,5 +30,4 @@ class Interpolate:
         self.height = h
 
     def __call__(self, image):
-        deb = 3
         return F.interpolate(image, size=(self.width, self.height))

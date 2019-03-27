@@ -1,3 +1,10 @@
+import numpy as np
+from PIL import Image
+import torch
+from torchvision.transforms import ToTensor, Compose, Resize, ToPILImage
+from torch.autograd import Variable
+
+
 def load_checkpoint(filepath):
     checkpoint = torch.load(filepath)
     model = checkpoint['model']
@@ -9,8 +16,14 @@ def load_checkpoint(filepath):
     return model
 
 
-def predict():
+def predict(params):
+
     image_transform = ToPILImage()
+
+    input_transform = Compose([
+        Resize((params["resize_width"], params["resize_width"])),
+        ToTensor(),
+    ])
 
     predict_transform = Compose([
         Resize((1608, 2022))
