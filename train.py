@@ -20,6 +20,7 @@ def plot_loss(loss_values, epoch):
 
 
 def main(params):
+
     input_transform = Compose([
         Resize((params["resize_width"], params["resize_width"])),
         ToTensor(),

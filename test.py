@@ -12,7 +12,6 @@ def load_checkpoint(fil_epath):
     model.load_state_dict(checkpoint['state_dict'])
     for parameter in model.parameters():
         parameter.requires_grad = False
-
     model.eval()
     return model
 
